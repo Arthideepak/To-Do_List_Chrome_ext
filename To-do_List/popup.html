@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do List Extension</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>Add To-do Item</h1>
+        </div>
+
+        <!-- Tab Information Section -->
+        <div class="tab-info">
+            <div class="field">
+                <label for="title">Title:</label>
+                <input type="text" id="title" placeholder="Task title" readonly>
+            </div>
+            <div class="field">
+                <label for="url">URL:</label>
+                <input type="text" id="url" placeholder="Tab URL" readonly>
+            </div>
+        </div>
+
+        <!-- Category Selection -->
+        <div class="field">
+            <label for="category">Category:</label>
+            <select id="category">
+                <option value="">Select a category...</option>
+                <option value="work">Work</option>
+                <option value="study">Study</option>
+                <option value="shopping">Shopping</option>
+                <option value="personal">Personal</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <!-- Additional Notes -->
+        <div class="field">
+            <label for="notes">Notes:</label>
+            <textarea id="notes" placeholder="Add notes for this task..." maxlength="200"></textarea>
+            <span class="char-count"><span id="char-count">0</span>/200</span>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="buttons">
+            <button id="save-btn" class="btn btn-primary">Save To-do</button>
+            <button id="view-btn" class="btn btn-secondary">View All</button>
+        </div>
+
+        <!-- Success Message -->
+        <div id="success-message" class="success-message" style="display: none;">
+            ✓ To-do item saved successfully!
+        </div>
+
+        <!-- Error Message -->
+        <div id="error-message" class="error-message" style="display: none;"></div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
